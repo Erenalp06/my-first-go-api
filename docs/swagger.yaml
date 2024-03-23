@@ -1,0 +1,138 @@
+definitions:
+  models.Todo:
+    properties:
+      content:
+        type: string
+      id:
+        type: string
+      title:
+        type: string
+    type: object
+info:
+  contact: {}
+paths:
+  /api/todo:
+    get:
+      description: Get a list of all todos
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Todo'
+            type: array
+      summary: Get all todos
+      tags:
+      - todos
+    post:
+      consumes:
+      - application/json
+      description: Add a new todo to the list
+      parameters:
+      - description: Create Todo
+        in: body
+        name: todo
+        required: true
+        schema:
+          $ref: '#/definitions/models.Todo'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/models.Todo'
+      summary: Add a new todo
+      tags:
+      - todos
+  /api/todo/{id}:
+    delete:
+      description: Delete a single todo by its ID
+      parameters:
+      - description: Todo ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 'State: true if deleted'
+          schema:
+            additionalProperties:
+              type: boolean
+            type: object
+      summary: Delete a todo by ID
+      tags:
+      - todos
+    get:
+      description: Get details of a single todo by its ID
+      parameters:
+      - description: Todo ID
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/models.Todo'
+      summary: Get a todo by ID
+      tags:
+      - todos
+    put:
+      consumes:
+      - application/json
+      description: Update details of a todo by its ID
+      parameters:
+      - description: Todo ID
+        in: path
+        name: id
+        required: true
+        type: string
+      - description: Update Todo
+        in: body
+        name: todo
+        required: true
+        schema:
+          $ref: '#/definitions/models.Todo'
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: 'state: record was updated successfully'
+          schema:
+            additionalProperties:
+              type: string
+            type: object
+      summary: Update a todo by ID
+      tags:
+      - todos
+  /api/todo/title/{title}:
+    get:
+      description: Get todos that match a specific title
+      parameters:
+      - description: Todo Title
+        in: path
+        name: title
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.Todo'
+            type: array
+      summary: Get todos by title
+      tags:
+      - todos
+swagger: "2.0"

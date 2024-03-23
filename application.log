@@ -33,3 +33,11 @@
 2024/03/23 22:59:33.562275 C:/go_projects/first_api/services/todoService.go:85: title and content must not be empty
 2024/03/23 22:59:33.562275 C:/go_projects/first_api/app/todoHandler.go:103: title and content must not be empty
 2024/03/23 23:15:56.029177 C:/go_projects/first_api/configs/setup.go:33: MongoDB'ye başarıyla bağlanıldı.
+2024/03/23 23:46:35.559887 C:/go_projects/first_api/configs/setup.go:33: MongoDB'ye başarıyla bağlanıldı.
+2024/03/23 23:49:22.794682 C:/go_projects/first_api/configs/setup.go:33: MongoDB'ye başarıyla bağlanıldı.
+2024/03/23 23:52:33.675571 C:/go_projects/first_api/configs/setup.go:33: MongoDB'ye başarıyla bağlanıldı.
+2024/03/23 23:54:37.903201 C:/go_projects/first_api/configs/setup.go:33: MongoDB'ye başarıyla bağlanıldı.
+2024/03/24 00:00:02.228818 C:/go_projects/first_api/configs/setup.go:33: MongoDB'ye başarıyla bağlanıldı.
+2024/03/24 00:00:45.664957 C:/go_projects/first_api/configs/setup.go:33: MongoDB'ye başarıyla bağlanıldı.
+2024/03/24 00:03:35.210820 C:/go_projects/first_api/configs/setup.go:33: MongoDB'ye başarıyla bağlanıldı.
+2024/03/24 00:05:23.308302 C:/go_projects/first_api/configs/setup.go:33: MongoDB'ye başarıyla bağlanıldı.

@@ -18,6 +18,7 @@ func main() {
 	todoService := services.NewTodoService(TodoRepositoryDb)
 
 	routes.SetupRoutes(appRoute, todoService)
+	routes.SwaggerRoute(appRoute)
 
 	appRoute.Listen(":8087")
 }
